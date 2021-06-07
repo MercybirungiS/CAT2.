@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a>
+  <a href="#tour" class="w3-button w3-bar-item">Tour</a>
+  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+</nav>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="https://nairobinews.nation.co.ke/wp-content/uploads/2019/09/Sauti-Sol.jpg"
+  style="width:100%">
+  <img class="mySlides" src="https://i2.wp.com/www.soundsofafrica.org/wp-content/uploads/2020/07/sauti-sol-2.jpg?fit=1200%2C1200&ssl=1"
+  style="width:100%">
+  <img class="mySlides" src="http://ocdn.eu/images/pulscms/NTE7MDA_/30b2539286250f255f865326b5d72f7e.png"
+  style="width:100%">
+</section>
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+    <h2 class="w3-wide">THE BAND</h2>
+    <p class="w3-opacity"><i>We love music</i></p>
+    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+  
+  <section>
+    
+      <h1>Contact Us Here</h1>
+
+<form name="form1">
+<p><b>Company name:</b> <input TYPE="TEXT" SIZE="20" NAME="yourcompany">
+</p>
+<p><b>Phone Number:</b> <input TYPE="TEXT" SIZE="30" NAME="number">
+</p>
+<p><b>Location: </b> <input TYPE="TEXT" SIZE="15" NAME="location">
+</p>
+<p><input TYPE="BUTTON" VALUE="Display" onClick="display();"></p>
+</form>
+
+   
+ </label>
+</section>
+
+<section>
+    <h1>Book Here</h1>
+
+<form action="/action_page.php">
+  <label for="booking">Date:</label>
+  <input type="date" id="booking" name="booking">
+  <input type="submit">
+</form>
+
+
+
+</section>
+  
+  <script>
+  // Automatic Slideshow - change image every 3 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+
+function display() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+  message = "<ul><li><b>Company Name: </b>" + document.form1.yourcompany.value;
+  message += "<li><b>Phone Number: </b>" + document.form1.number.value;
+  message += "<li><b>Location: </b>" + document.form1.location.value + "</ul>";
+  DispWin.document.write(message);
+  }
+
+  </script>
+  
+  </body>
+  </html>
+
+
+
+
+  <!-- 
+HOW THE SCRIPT FOR MOVING THE CAROUSEL WORKS
+HTML
+The carousel holds all all the elements like the images and the nav bars inside it .
+The  one can ceate a div and give it an id carousel wrapper . This can be used to size and hide any overflow content from inside it
+In order to style the image , the img tag is uadually given an id name for instance carousel__image  . This  is applied to the  <img> tags for easy styling.
+
+
+JAVASCRIPT
+
+The carousel is a slideshow for cycling through a series of content,  built with CSS 3D transforms and a bit of JavaScript. It works with a series of 
+images, text, or custom markup. It also includes support for previous/next controls and indicators. 
+To initiate the carousel ,we do it by finding the initial item and applying the .prev and .next class to its adjacent items. We then add click events to our nav bars .
+Two fumctions are then created to handle each direction .Once we know the direction a user is trying to navigate, another function is creaed to move the carousel in that direction.
+To avoid people over-clicking the buttons, interactivity is diasabled  while the carousel is animating, and its enabled again when the iteractivity is disabled 
+To handle all of this,  a function  is created that moves items in the carousel by figuring out which items to update, and updates them with new classes to trigger the transitions.
+
+   -->
+   <!-- 
+       NUMBER 4
+var myObject = {
+    name: "Lovelace",
+    func: function() {
+        var self = this;
+        console.log("outer func:  this.name = " + this.name);
+        console.log("outer func:  self.name = " + self.name);
+        (function() {
+            console.log("inner func:  this.name = " + this.name);
+            console.log("inner func:  self.name = " + self.name);
+        }());
+    }
+};
+myObject.func();
+
+The output of this function is Lovelace
+This is because this is a closure . In the second function.
+
+
+
+    -->
+  
+  
+ 
